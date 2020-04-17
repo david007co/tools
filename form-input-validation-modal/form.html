@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- External Javascript -->
+    <script type="text/javascript" src="main.js"></script>
+    <!-- Latest compiled and minified CSS  Bootstrap && jQuery-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Import the Modal tool from Bootstrap -->
+        <!-- Modal -->
+        <div class="modal fade" id="dgModal" tabindex="-1" role="dialog" aria-labelledby="dgModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dgModalLabel">Attention</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--[End Modal]-->
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="myForm">
+            <label for="myForm">Movie Details:</label>
+            <div>
+                <label for="movie-name1">Movie Name1 *:</label>
+                <input required type="text" name="movie-name1" placeholder="The name for movie 1" id="movie-name1"
+                    class="form-text-input" title="Title of movie name 1">
+            </div>
+
+            <div>
+                <label for="movie-name2">Movie Name2 *:</label>
+                <input required type="text" name="movie-name2" placeholder="The name for movie 2" id="movie-name2"
+                    class="form-text-input" title="Title of movie name 2">
+            </div>
+
+            <div>
+                <label for="movie-name3">Movie Name3 :</label>
+                <input type="text" name="movie-name3" placeholder="NOT REQUIRED. Movie3" id="movie-name3" class="form-text-input"
+                    title="Title of movie name 3 NOT REQUIRED">
+            </div>
+
+            <div>
+                <label for="date-visit">Date of visit *:</label>
+                <input required type="date" name="date-visit" placeholder="Date of this visit" id="date-visit" class="form-text-input" title="Title for date required">
+            </div>
+
+            <div>
+                <label for="wikipage">Wikipedia Page *: </label>
+                <input required type="url" name="wikipage" placeholder="a URL for this movie" id="wikipage" class="form-text-input" title="The URL">
+            </div>
+
+            <input class="button red-tooltip" data-toggle="tooltip" data-placement="top" title="My tooltip"
+                id="submitButton" type="button" value="Main Submit" onclick="submitForm()">
+
+            <br>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dgModal">
+                Modal can be Launched with a Button. Click Here
+            </button>
+
+        </form>
+    </div>
+    
+</body>
+</html>
